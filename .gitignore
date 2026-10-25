@@ -1,0 +1,83 @@
+> 本文件参考 Python 官方模板，并补充 AI/深度学习项目的常见忽略项。
+
+# ---- Byte-compiled / cache ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ---- Distribution / packaging ----
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---- Environment & secrets ----
+.env
+.env.*
+*.key
+*.pem
+
+# ---- Data (原始/中间数据不入库) ----
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.csv
+*.tsv
+*.parquet
+*.db
+*.sqlite3
+
+# ---- Model weights & checkpoints ----
+models/**/*.pt
+models/**/*.pth
+models/**/*.bin
+models/**/*.safetensors
+models/**/*.onnx
+models/**/*.h5
+models/**/*.ckpt
+*.pth
+*.pt
+*.safetensors
+*.onnx
+*.gguf
+
+# ---- Training logs / experiment trackers ----
+runs/
+logs/
+outputs/
+lightning_logs/
+wandb/
+mlruns/
+.tensorboard/
+*.log
+
+# ---- IDE / editors ----
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.swp
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- MyPy / pytest / coverage ----
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
