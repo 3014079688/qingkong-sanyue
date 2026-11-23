@@ -1,0 +1,84 @@
+{
+  "corpus": {
+    "lines": 5048,
+    "chars": 113452,
+    "unique_chars": 3911,
+    "train_lines": 4795,
+    "held_lines": 253,
+    "docs": 7,
+    "tang": 5313
+  },
+  "vocab": {
+    "char_start": 9911,
+    "byte_start": 9911
+  },
+  "held_chars": 57747,
+  "rows": [
+    {
+      "name": "字符级基线",
+      "tokens": 57747,
+      "ratio": 1.0,
+      "oov": 0.0
+    },
+    {
+      "name": "我的 BPE（字符表起步）",
+      "tokens": 56873,
+      "ratio": 0.985,
+      "oov": 0.2857
+    },
+    {
+      "name": "我的 BPE（字节起步）",
+      "tokens": 67874,
+      "ratio": 1.175,
+      "oov": 0.0
+    },
+    {
+      "name": "cl100k_base",
+      "tokens": 40962,
+      "ratio": 0.709,
+      "oov": 0.0
+    },
+    {
+      "name": "o200k_base",
+      "tokens": 33171,
+      "ratio": 0.574,
+      "oov": 0.0
+    }
+  ],
+  "roundtrip": {
+    "我的 BPE（字符表起步）": false,
+    "我的 BPE（字节起步）": true,
+    "cl100k_base": true,
+    "o200k_base": true
+  },
+  "learned_merges": [
+    "樂章",
+    "德，",
+    "吹曲",
+    "，萬",
+    "武后",
+    "風。",
+    "聲。",
+    "，神",
+    "太子",
+    "，禮",
+    "光。",
+    "樂舞",
+    "昊天",
+    "人。",
+    "廟樂舞",
+    "明。",
+    "春。",
+    "，永",
+    "二十",
+    "天。",
+    "成。",
+    "長。",
+    "新。",
+    "，三"
+  ],
+  "loss_example": {
+    "original": "智能机器人专业的同学在做步态加速度特征采集。",
+    "decoded_char": "智能器人的同在步加速度特征采集。"
+  }
+}
