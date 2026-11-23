@@ -8,6 +8,8 @@
 
 ```
 qingkong-sanyue/
+├── ai-assistant/       # 已归档项目：本地私人 AI 助手（见下方说明）
+├── bpe-demo/           # 已归档项目：中文 BPE 分词器（见下方说明）
 ├── configs/            # 训练与实验配置（yaml/json），一切可复现的前提
 ├── data/
 │   ├── raw/            # 原始数据（不入库，见 .gitignore）
@@ -22,6 +24,21 @@ qingkong-sanyue/
 │   ├── training/       #   训练与评测循环
 │   └── utils/          #   工具函数
 └── CHANGELOG.md        # 按时间倒序的大事记
+```
+
+## 已归档项目
+
+独立成型的项目以子目录形式并入，各自**保留完整的提交历史**（`git subtree`），不套用上面的 `src/` 骨架。可复现的细节写在各自的 README 里。
+
+| 目录 | 项目 | 说明 | 入口 |
+|---|---|---|---|
+| `ai-assistant/` | 本地私人 AI 助手 | Ollama + FastAPI + 单文件界面，带本地知识库检索；全程离线，数据不出本机 | [BUILD-LOG.md](ai-assistant/BUILD-LOG.md) |
+| `bpe-demo/` | 中文 BPE 分词器 | 从零训练分词器，与商用分词器对比 token 切分效果 | [token 对话记录](bpe-demo/docs/2026-11-23-token对话记录.md) |
+
+新增项目沿用同样方式并入：
+
+```bash
+git subtree add --prefix=<项目名> <项目本地路径> main -m "feat: 并入 <项目名>"
 ```
 
 ## 快速约定
