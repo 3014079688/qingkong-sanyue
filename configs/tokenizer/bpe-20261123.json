@@ -1,0 +1,41 @@
+{
+  "experiment": "20261123-token-bpe",
+  "seed": 20261123,
+  "corpus": {
+    "primary": {
+      "path": "data/raw/tang0.json",
+      "source": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/master/全唐诗/poet.tang.0.json",
+      "sha256": "4f88f429938082523cdc72a1612bd7a7c3e3f7a33f8192c61ae51340efc3c92d",
+      "bytes": 408405,
+      "note": "全唐诗第 0 卷，5313 条。原始数据不入库，需按 source 自行下载并校验 sha256"
+    }
+  },
+  "split": {
+    "train_ratio": 0.95
+  },
+  "tokenizer": {
+    "char_start": {
+      "initial_alphabet": "corpus_chars",
+      "vocab_size": 9911,
+      "min_frequency": 1,
+      "special_tokens": ["<unk>"]
+    },
+    "byte_start": {
+      "initial_alphabet": "byte_level_256",
+      "vocab_size": 9911,
+      "min_frequency": 1,
+      "special_tokens": []
+    }
+  },
+  "eval": {
+    "held_out_from_corpus": true,
+    "oov_probe_sentences": [
+      "智能机器人专业的同学在做步态加速度特征采集。",
+      "我把传感器绑在膝盖上，采样频率是一百赫兹。",
+      "这段代码需要先安装依赖，然后运行主程序。",
+      "机器学习模型的推理速度取决于上下文窗口的大小。",
+      "今天食堂的红烧肉特别好吃，我吃了两份。"
+    ],
+    "segmentation_samples": 3
+  }
+}

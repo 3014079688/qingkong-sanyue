@@ -1,3 +1,10 @@
-# 项目依赖（待补齐后锁定版本）
+# 项目依赖
+# 用法：pip install -r requirements.txt
+
+# 分词器训练与对比（实验 20261123-token-bpe）
+tokenizers==0.23.3
+tiktoken==0.14.0
+
+# 以下待具体实验补充后锁定版本
 # numpy==
 # torch==

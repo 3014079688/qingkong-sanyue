@@ -1,0 +1,92 @@
+{
+  "experiment": "20261123-token-bpe",
+  "seed": 20261123,
+  "corpus": {
+    "path": "data/raw/tang0.json",
+    "sha256": "4f88f429938082523cdc72a1612bd7a7c3e3f7a33f8192c61ae51340efc3c92d",
+    "bytes": 408405,
+    "lines": 5041,
+    "chars": 58744,
+    "unique_chars": 3353,
+    "train_lines": 4788,
+    "held_lines": 253,
+    "held_chars": 2925
+  },
+  "vocab": {
+    "char_start": 9911,
+    "byte_start": 9911
+  },
+  "rows": [
+    {
+      "name": "字符级基线",
+      "vocab": 3312,
+      "tokens": 2925,
+      "ratio": 1.0,
+      "oov_rate": 0.0
+    },
+    {
+      "name": "我的 BPE（字符表起步）",
+      "vocab": 9911,
+      "tokens": 2089,
+      "ratio": 0.714,
+      "oov_rate": 0.2857
+    },
+    {
+      "name": "我的 BPE（字节起步）",
+      "vocab": 9911,
+      "tokens": 2462,
+      "ratio": 0.842,
+      "oov_rate": 0.0
+    },
+    {
+      "name": "cl100k_base",
+      "vocab": null,
+      "tokens": 5024,
+      "ratio": 1.718,
+      "oov_rate": 0.0
+    },
+    {
+      "name": "o200k_base",
+      "vocab": null,
+      "tokens": 3585,
+      "ratio": 1.226,
+      "oov_rate": 0.0
+    }
+  ],
+  "roundtrip": {
+    "我的 BPE（字符表起步）": false,
+    "我的 BPE（字节起步）": true,
+    "cl100k_base": true,
+    "o200k_base": true
+  },
+  "learned_merges": [
+    "樂章",
+    "德，",
+    "吹曲",
+    "，萬",
+    "武后",
+    "風。",
+    "春。",
+    "聲。",
+    "，神",
+    "人。",
+    "太子",
+    "樂舞",
+    "，禮",
+    "光。",
+    "昊天",
+    "廟樂舞",
+    "明。",
+    "二十",
+    "天。",
+    "，三",
+    "，永",
+    "成。",
+    "新。",
+    "長。"
+  ],
+  "loss_example": {
+    "original": "智能机器人专业的同学在做步态加速度特征采集。",
+    "decoded_char_start": "智能器人的同在步加速度特征采集。"
+  }
+}
