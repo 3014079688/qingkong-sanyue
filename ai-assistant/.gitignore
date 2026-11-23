@@ -1,0 +1,12 @@
+# 运行时数据：会话记录、知识库向量、设置
+_data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 模型与下载缓存（不随仓库走）
+*.zip
+*.gguf
